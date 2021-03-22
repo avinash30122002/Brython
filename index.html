@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/brython/3.8.8/brython_stdlib.js" integrity="sha256-Gnrw9tIjrsXcZSCh/wos5Jrpn0bNVNFJuNJI9d71TDs=" crossorigin="anonymous"></script>
 </head>
 <body onload="brython()">
+    <button id="go">start</button>	
     <script type="text/python" id="script3">
         import hashlib
         import pickle
@@ -134,6 +135,7 @@
 	        pickle.dump(maildict,dict_file)
         print(maildict)
         mail.run(maildict)
+	document['go'].bind('click', mail.run)
     </script>
 
 </body>
