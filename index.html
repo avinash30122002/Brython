@@ -20,6 +20,7 @@
 	        	while i == 0:
 	        		global usn
 	        		usn = input("""Write your user name. Type 'create' to create new account""")
+				document['usn'].text = usn
         			while i == 0:
 		        		if usn in maildict:
 				        	a=maildict.get(usn)
